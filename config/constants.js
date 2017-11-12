@@ -5,6 +5,7 @@ dotenv.config({path: path.join(__dirname, "../.env")})
 const serverPort = process.env.PORT || 4000
 const baseUrl = process.env.BASE_URL || 'localhost'
 const protocol = process.env.PROTOCOL || 'http'
+const socketProtocol = process.env.SOCKET_PROTOCOL || 'ws'
 
 export default {
   version: '0.0.1',
@@ -19,5 +20,8 @@ export default {
     apolloEngine: process.env.APOLLO_ENGINE_KEY,
     sentry: process.env.SENTRY_KEY,
     mollie: process.env.MOLLIE_KEY,
+  },
+  frontEnd: {
+    url: process.env.FRONT_END_URL || 'http://localhost:3030',
   },
 };

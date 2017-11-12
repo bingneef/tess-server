@@ -19,6 +19,7 @@ import logger from './services/logger'
 import Router from 'koa-router'
 import router from './router'
 import sessionRouter from './router/session'
+import servicesRouter from './router/services'
 
 import AuthenticationMiddleware from './middleware/authentication'
 import DataLoadersMiddleware from './middleware/dataLoaders'
@@ -57,6 +58,7 @@ app.use(koaBody())
 
 // Authentication
 app.use(sessionRouter.routes()).use(sessionRouter.allowedMethods())
+app.use(servicesRouter.routes()).use(servicesRouter.allowedMethods())
 app.use(AuthenticationMiddleware)
 
 // Routes

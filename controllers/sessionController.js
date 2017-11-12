@@ -16,7 +16,5 @@ export const login = async (ctx, next) => {
   } catch (e) {
     console.log(e)
     ctx.status = 422
-  } finally {
-    return null
   }
 }

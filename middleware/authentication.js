@@ -14,7 +14,7 @@ module.exports = async (ctx, next) => {
   }
 
   try {
-    const token = ctx.query.token || ctx.request.header['x-auth'] || 'testtest'
+    const token = ctx.query.token || ctx.request.header['x-auth']
     ctx.currentUser = await ctx.dataLoaders.userByToken.load(token)
     if (!ctx.currentUser) {
       ctx.body = unauthorized
