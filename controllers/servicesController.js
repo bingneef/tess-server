@@ -2,6 +2,7 @@ import constants from '../config/constants'
 import { mollie } from '../services/mollie'
 import { Credit } from '../models'
 import { sendException } from '../services/sentry'
+import { sendPaymentHook } from '../services/slack'
 
 export const mollieWebhook = async (ctx, next) => {
   const paymentId = ctx.request.body.id
@@ -15,6 +16,10 @@ export const mollieWebhook = async (ctx, next) => {
 
           credit.set({ 'payment.status': payment.status.toUpperCase() })
           await credit.save()
+
+          if (credit.payment.status == 'PAID') {
+            sendPaymentHook({amount: 10.00, name: 'test'})
+          }
 
           ctx.status = 200
           resolve()

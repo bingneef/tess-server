@@ -24,4 +24,9 @@ export default {
   frontEnd: {
     url: process.env.FRONT_END_URL || 'http://localhost:3030',
   },
+  thirdParty: {
+    slack: {
+      payment: process.env.SLACK_WEBHOOK_URL,
+    }
+  }
 };

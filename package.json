@@ -60,6 +60,7 @@
     "node-cron": "^1.2.1",
     "raven": "^2.2.1",
     "sharp": "^0.18.4",
+    "slack-node": "^0.1.8",
     "sports-live": "^1.0.1",
     "subscriptions-transport-ws": "^0.9.0",
     "unescape": "^1.0.1",

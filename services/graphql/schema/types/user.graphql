@@ -13,6 +13,7 @@ type User {
   familyName: String
   givenName: String
   name: String
+  kind: String
   photoUrl: String
   token: String
   externalId: String
