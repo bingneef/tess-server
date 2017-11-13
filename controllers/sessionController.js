@@ -6,7 +6,7 @@ export const login = async (ctx, next) => {
   try {
     const idToken = ctx.request.body.idToken
     const decodedToken = await firebase.auth().verifyIdToken(idToken)
-    const user = await User.findOne({externalId: decodedToken.user_id})
+    const user = await User.findOne({externalId: decodedToken.uid})
 
     if (user) {
       ctx.body = { token: user.token }
@@ -14,7 +14,8 @@ export const login = async (ctx, next) => {
       ctx.status = 404
     }
   } catch (e) {
-    console.log(e)
     ctx.status = 422
+  } finally {
+    return
   }
 }
