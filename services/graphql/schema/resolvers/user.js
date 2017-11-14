@@ -3,6 +3,7 @@ import { User, Credit, Message } from '../../../../models'
 export default {
   Query: {
     currentUser: async ({ ctx }) => ctx.currentUser,
+    exploreUsers: async ({ ctx }) => await User.find(),
   },
   Mutation: {
     validateToken: async ({ ctx }, { token }) => await ctx.dataLoaders.user.load(token),

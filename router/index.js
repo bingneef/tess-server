@@ -11,7 +11,7 @@ router.all('/graphql',
     rootValue: {
       ctx,
     },
-    // tracing: true,
+    tracing: true,
     cacheControl: true,
   })(ctx, next)
 )

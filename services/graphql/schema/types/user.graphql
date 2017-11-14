@@ -22,6 +22,7 @@ type User {
 
 type Query {
   currentUser: User
+  exploreUsers: [User]
 }
 
 type Mutation {

@@ -23,7 +23,7 @@
   "dependencies": {
     "@koa/cors": "2",
     "apollo-engine": "^0.5.2",
-    "apollo-server-koa": "^1.1.2",
+    "apollo-server-koa": "^1.2.0",
     "axios": "^0.16.2",
     "bcrypt": "^1.0.3",
     "bluebird": "^3.5.0",
