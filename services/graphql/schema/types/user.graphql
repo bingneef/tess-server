@@ -1,5 +1,5 @@
 input UserInput {
-  email: String!
+  email: String
   familyName: String
   givenName: String
   name: String
@@ -26,6 +26,6 @@ type Query {
 }
 
 type Mutation {
-  createOrUpdateUser(user: UserInput): User
+  updateUser(user: UserInput): User
   validateToken(token: String): User
 }
