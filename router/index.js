@@ -16,7 +16,7 @@ router.all('/graphql',
   })(ctx, next)
 )
 
-if (true || process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   router.get('/graphiql', graphiqlKoa({
     schema,
     endpointURL: '/graphql',

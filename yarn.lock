@@ -3358,6 +3358,10 @@ make-dir@^1.0.0:
   dependencies:
     pify "^2.3.0"
 
+map-array-response@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/map-array-response/-/map-array-response-0.0.3.tgz#d370ca58d6f921f0f95db32ab5f93f167f75a6e5"
+
 map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
